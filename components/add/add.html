@@ -1,0 +1,136 @@
+<section layout="row" layout-align="space-around center" layout-wrap style="height: 55vh !important;">
+    <md-button class="md-raised md-primary" ng-disabled="!add.defaultVal1 || !add.defaultVal2 || !add.trigger"
+               ng-click="add.addFunc(add.firstDigit,add.secondDigit)">Add</md-button>
+    <div>
+        <md-input-container ng-if="add.trigger && add.defaultVal1">
+            <label>First value</label>
+            <input ng-model="add.firstDigit" type="number" ng-pattern="add.onlyNumbers">
+        </md-input-container>
+
+        <div layout="row" ng-if="add.trigger && add.adVal1">
+            <md-button class="md-raised md-primary" ng-click="add.addFunc1(add.addFirstDigit,add.addSecondDigit)">Add
+            </md-button>
+            <md-input-container>
+                <label>First value</label>
+                <input ng-model="add.addFirstDigit" type="number" ng-pattern="add.onlyNumbers">
+            </md-input-container>
+            <md-input-container>
+                <label>Second Value</label>
+                <input ng-model="add.addSecondDigit" type="number" ng-pattern="add.onlyNumbers">
+            </md-input-container>
+        </div>
+
+
+        <div layout="row" ng-if="add.trigger && add.subVal1">
+            <md-button class="md-raised md-primary" ng-click="add.subtractFunc1(add.subFirstDig,add.subSecondDig)">
+                Subtract
+            </md-button>
+            <md-input-container>
+                <label>First value</label>
+                <input ng-model="add.subFirstDig" type="number" ng-pattern="add.onlyNumbers">
+            </md-input-container>
+            <md-input-container>
+                <label>Second value</label>
+                <input ng-model="add.subSecondDig" type="number" ng-pattern="add.onlyNumbers">
+            </md-input-container>
+        </div>
+
+        <div layout="row" ng-if="add.trigger && add.mulVal1">
+            <md-button class="md-raised md-primary" ng-click="add.mulFunc1(add.mulFirstDigit,add.mulSecondDigit)">
+                Multiply
+            </md-button>
+            <md-input-container>
+                <label>First value</label>
+                <input ng-model="add.mulFirstDigit" type="number" ng-pattern="add.onlyNumbers">
+            </md-input-container>
+
+            <md-input-container>
+                <label>Second value</label>
+                <input ng-model="add.mulSecondDigit" type="number" ng-pattern="add.onlyNumbers">
+            </md-input-container>
+        </div>
+
+        <div layout="row" ng-if="add.trigger && add.compVal1">
+            <md-button class="md-raised md-primary" ng-click="add.compFunc1(add.divFirstDigit,add.divSecondDigit)">
+                Divide
+            </md-button>
+            <md-input-container>
+                <label>First value</label>
+                <input ng-model="add.divFirstDigit" type="number" ng-pattern="add.onlyNumbers">
+            </md-input-container>
+
+            <md-input-container>
+                <label>Second Value</label>
+                <input ng-model="add.divSecondDigit" type="number" ng-pattern="add.onlyNumbers">
+            </md-input-container>
+        </div>
+    </div>
+
+    <div>
+        <md-input-container ng-if="add.trigger && add.defaultVal2">
+            <label>Second Value</label>
+            <input ng-model="add.secondDigit" type="number" ng-pattern="add.onlyNumbers">
+        </md-input-container>
+
+        <div layout="row" ng-if="add.trigger && add.adVal2">
+            <md-button class="md-raised md-primary" ng-click="add.addFunc2(add.addFirstDigit2,add.addSecondDigit2)">
+                Add
+            </md-button>
+            <md-input-container>
+                <label>First value</label>
+                <input ng-model="add.addFirstDigit2" type="number" ng-pattern="add.onlyNumbers">
+            </md-input-container>
+            <md-input-container>
+                <label>Second Value</label>
+                <input ng-model="add.addSecondDigit2" type="number" ng-pattern="add.onlyNumbers">
+            </md-input-container>
+        </div>
+
+
+        <div layout="row" ng-if="add.trigger && add.subVal2">
+            <md-button class="md-raised md-primary" ng-click="add.subtractFunc2(add.subFirstDig2,add.subSecondDig2)">
+                Subtract
+            </md-button>
+            <md-input-container>
+                <label>First value</label>
+                <input ng-model="add.subFirstDig2" type="number" ng-pattern="add.onlyNumbers">
+            </md-input-container>
+            <md-input-container>
+                <label>Second value</label>
+                <input ng-model="add.subSecondDig2" type="number" ng-pattern="add.onlyNumbers">
+            </md-input-container>
+        </div>
+
+        <div layout="row" ng-if="add.trigger && add.mulVal2">
+            <md-button class="md-raised md-primary" ng-click="add.mulFunc2(add.mulFirstDigit2,add.mulSecondDigit2)">
+                Multiply
+            </md-button>
+            <md-input-container>
+                <label>First value</label>
+                <input ng-model="add.mulFirstDigit2" type="number" ng-pattern="add.onlyNumbers">
+            </md-input-container>
+
+            <md-input-container>
+                <label>Second value</label>
+                <input ng-model="add.mulSecondDigit2" type="number" ng-pattern="add.onlyNumbers">
+            </md-input-container>
+        </div>
+
+        <div layout="row" ng-if="add.trigger && add.compVal2">
+            <md-button class="md-raised md-primary" ng-click="add.compFunc2(add.divFirstDigit2,add.divSecondDigit2)">
+                Divide
+            </md-button>
+            <md-input-container>
+                <label>First value</label>
+                <input ng-model="add.divFirstDigit2" type="number" ng-pattern="add.onlyNumbers">
+            </md-input-container>
+
+            <md-input-container>
+                <label>Second Value</label>
+                <input ng-model="add.divSecondDigit2" type="number" ng-pattern="add.onlyNumbers">
+            </md-input-container>
+        </div>
+    </div>
+    <br>
+    <p style="font-size: 3.5em; color:brown" ng-if="!add.trigger">{{add.resultVal}}</p>
+</section>
